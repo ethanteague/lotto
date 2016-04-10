@@ -8,8 +8,6 @@ Template.ltGrab.helpers({
     Meteor.setInterval(function () {
       $.each(theGames, function (key, value) {
         if (value.game == "PLAY4" || value.game == "CASH3") {
-          //console.log(this);
-          //console.log(value);
           var datevalue = {
             "day": new Date(value.drawdate.day),
             "eve": new Date(value.drawdate.eve)

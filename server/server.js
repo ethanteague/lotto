@@ -40,27 +40,6 @@ Meteor.methods({
     });
   },
 
-  "twiceData": function(titleval, dateval, numsval) {
-    if (numsval.eve) {
-      twiceGames.insert({
-        title: titleval,
-        nightDate: dateval.eve,
-        dayDate: dateval.day,
-        _id: numsval.eve,
-        dayNums: numsval.day
-      });
-    }
-    if (numsval.day) {
-      twiceGames.insert({
-        title: titleval,
-        nightDate: dateval.eve,
-        dayDate: dateval.day,
-        nightNums: numsval.eve,
-        _id: numsval.day
-      });
-    }
-  }
-
 });
 
 Meteor.publish("numStore", function() {
@@ -69,10 +48,6 @@ Meteor.publish("numStore", function() {
 
 Meteor.publish("numberHits", function() {
   return numberHits.find();
-})
-
-Meteor.publish("twiceGames", function() {
-  return twiceGames.find();
 })
 
 Meteor.publish("doubleGames", function() {
