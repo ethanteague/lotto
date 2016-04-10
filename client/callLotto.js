@@ -43,7 +43,6 @@ callLotto = function () {
         splitNumAMakeArray = splitNumA[0] ? splitNumA[0].split(/-| /) : splitNumA.split(/-| /);
 
         NumBpick = numStore.findOne({"title": this["game"]}, {sort: {"date": -1, limit: 1}});
-        console.log(NumBpick);
         if (this["game"] !== "PLAY4" && this["game"] !== "CASH3") {
           if (NumBpick !== undefined) {
             splitNumB = NumBpick["_id"].split(/ X/);

@@ -28,7 +28,7 @@ Meteor.methods({
     ltGames.insert({
       title: titleval,
       date: dateval,
-      _id: numsval
+      nums: numsval
     });
   },
 

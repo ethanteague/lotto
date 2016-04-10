@@ -20,16 +20,20 @@ Template.ltGrab.helpers({
             }
           });
         } else {
-          console.log(value.drawdate);
+          console.log(this);
+          console.log(value);
           var datevalue = new Date(value.drawdate);
-          console.log(datevalue);
-          Meteor.call("ltData", value.game, datevalue, value.winnum, function (error, result) {
-            if (error) {
-              //console.log(error.reason);
-            } else {
-              //console.log('successful insert');
-            }
-          });
+          var existsCheck = ltGames.findOne({"title": this["game"]}, {"num": this["winnum"]}, {"date": this["drawdate"]});
+          console.log(existsCheck);
+          if (existsCheck === undefined) {
+            Meteor.call("ltData", value.game, datevalue, value.winnum, function (error, result) {
+              if (error) {
+                //console.log(error.reason);
+              } else {
+                //console.log('successful insert');
+              }
+            });
+          }
         }
       });
       callLotto();
