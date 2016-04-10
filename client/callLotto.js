@@ -37,12 +37,13 @@ callLotto = function () {
     $.each(title, function () {
 
       NumA = this["winnum"];
+
       if (NumA.length) {
         splitNumA = NumA.split(/ X/);
         splitNumAMakeArray = splitNumA[0] ? splitNumA[0].split(/-| /) : splitNumA.split(/-| /);
 
         NumBpick = numStore.findOne({"title": this["game"]}, {sort: {"date": -1, limit: 1}});
-
+        console.log(NumBpick);
         if (this["game"] !== "PLAY4" && this["game"] !== "CASH3") {
           if (NumBpick !== undefined) {
             splitNumB = NumBpick["_id"].split(/ X/);
@@ -55,7 +56,7 @@ callLotto = function () {
             });
             var matchesActual = getMatch(sortedA, sortedB);
             if (matchesActual.length) {
-              Meteor.call("numberHits", this["game"], this["drawdate"], this["_id"], this["winnum"], matchesActual, function (error, result) {
+              Meteor.call("numberHits", this["game"], this["drawdate"], NumBpick["nums"], this["winnum"], matchesActual, function (error, result) {
                 if (error) {
                   console.log(error.reason);
                 } else {

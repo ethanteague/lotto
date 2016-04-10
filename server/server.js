@@ -10,7 +10,7 @@ Meteor.methods({
     numStore.insert({
       title: titleval,
       date: dateval,
-      _id: numsval
+      nums: numsval
     });
   },
 
