@@ -14,4 +14,5 @@ Tracker.autorun(function () {
   Meteor.subscribe("numStore");
   Meteor.subscribe("ltGames");
   Meteor.subscribe("twiceGames");
+  Meteor.subscribe("doubleGames");
 });

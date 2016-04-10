@@ -8,24 +8,30 @@ Template.ltGrab.helpers({
     Meteor.setInterval(function () {
       $.each(theGames, function (key, value) {
         if (value.game == "PLAY4" || value.game == "CASH3") {
+          //console.log(this);
+          //console.log(value);
           var datevalue = {
             "day": new Date(value.drawdate.day),
             "eve": new Date(value.drawdate.eve)
           };
-          Meteor.call("twiceData", value.game, datevalue, value.winnum, function (error, result) {
-            if (error) {
-              //console.log(error.reason);
-            } else {
-              //console.log('successful insert');
-            }
-          });
+          var doubleGamesDayCheck = doubleGames.findOne({"title": this.game}, {"nums.day": this.winnum.day}, {"date.day": this.drawdate.day});
+          console.log(doubleGamesDayCheck);
+          var doubleGamesNightCheck = doubleGames.findOne({"title": this.game}, {"nums.eve": this.winnum.eve}, {"date.eve": this.drawdate.eve});
+          console.log(doubleGamesDayCheck);
+          console.log(doubleGamesNightCheck);
+          if (doubleGamesDayCheck === undefined && doubleGamesNightCheck === undefined) {
+            Meteor.call("doubleGames", value.game, datevalue, value.winnum, function (error, result) {
+              if (error) {
+                //console.log(error.reason);
+              } else {
+                //console.log('successful insert');
+              }
+            });
+          }
         } else {
-          console.log(this);
-          console.log(value);
           var datevalue = new Date(value.drawdate);
-          var existsCheck = ltGames.findOne({"title": this["game"]}, {"num": this["winnum"]}, {"date": this["drawdate"]});
-          console.log(existsCheck);
-          if (existsCheck === undefined) {
+          var ltDataCheck = ltGames.findOne({"title": this["game"]}, {"num": this["winnum"]}, {"date": this["drawdate"]});
+          if (ltDataCheck === undefined) {
             Meteor.call("ltData", value.game, datevalue, value.winnum, function (error, result) {
               if (error) {
                 //console.log(error.reason);

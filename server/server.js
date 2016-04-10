@@ -32,6 +32,14 @@ Meteor.methods({
     });
   },
 
+  "doubleGames": function(titleval, dateval, numsval) {
+    doubleGames.insert({
+      title: titleval,
+      date: dateval,
+      nums: numsval
+    });
+  },
+
   "twiceData": function(titleval, dateval, numsval) {
     if (numsval.eve) {
       twiceGames.insert({
@@ -65,6 +73,10 @@ Meteor.publish("numberHits", function() {
 
 Meteor.publish("twiceGames", function() {
   return twiceGames.find();
+})
+
+Meteor.publish("doubleGames", function() {
+  return doubleGames.find();
 })
 
 Meteor.publish("ltGames", function() {
