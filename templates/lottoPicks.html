@@ -1,0 +1,123 @@
+<template name="lottoPicks">
+  {{#if status}}
+    Number saved!
+  {{/if}}
+  <form class="chooseGame">
+    <select firstoption="Select a game" name="gamePick" id="gamePick" required="" data-schema-key="gamePick"
+            autocomplete="off" class="form-control">
+      <option value="">Select a game</option>
+      <option value="POWERBALL">Powerball</option>
+      <option value="LOTTO">Florida Lotto</option>
+      <option value="MEGAMILLIONS">Mega Millions</option>
+      <option value="FAN5">Fantasy 5</option>
+      <option value="PLAY4">Play 4</option>
+      <option value="CASH3">Cash 3</option>
+      <option value="LUCKY">Lucky Money</option>
+    </select>
+  </form>
+  <br/>
+  {{#if _.isEqual data.[1] "POWERBALL"}}
+    <form class="chooseGame {{data.[1]}}">
+      <div id="messages"></div>
+      {{#each data.[0]}}
+        {{#if _.isEqual this "Special"}}
+          <input type="number" class="special" size="2" min="1" max="26" required name={{this}}>
+        {{else}}
+          <input type="number" size="2" min="1" max="69" required name={{this}}>
+        {{/if}}
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">Add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "LOTTO"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        <input type="number" size="2" min="1" max="53" required name={{this}}>
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "MEGAMILLIONS"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        {{#if _.isEqual this "Special"}}
+          <input type="number" class="special" size="2" min="1" max="15" required name={{this}}>
+        {{else}}
+          <input type="number" size="2" min="1" max="75" required name={{this}}>
+        {{/if}}
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "FAN5"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        <input type="number" size="2" min="1" max="36" required name={{this}}>
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "PLAY4"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        <input type="number" size="1" min="0" max="9" required name={{this}}>
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "CASH3"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        <input type="number" size="1" min="0" max="9" required name={{this}}>
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "LUCKY"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        {{#if _.isEqual this "Special"}}
+          <input type="number" class="special" size="2" min="1" max="17" required name={{this}}>
+        {{else}}
+          <input type="number" size="2" min="1" max="57" required name={{this}}>
+        {{/if}}
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+</template>

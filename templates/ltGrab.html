@@ -1,0 +1,47 @@
+
+<template name="ltGrab">
+  <ul>
+    {{#each data}}
+      <li>
+        <strong>Game:</strong>
+        <span class="green">{{this.game}}</span>
+      </li>
+      <li>
+        {{#if this.drawdate.day}}
+          {{#if this.drawdate.day}}
+            Day Draw:
+            {{this.drawdate.day}}
+          {{/if}}
+          <br/>
+          {{#if this.drawdate.eve}}
+            Night Draw:
+            {{this.drawdate.eve}}
+          {{/if}}
+        {{else}}
+          Draw Date:
+          {{this.drawdate}}
+        {{/if}}
+      </li>
+      <li>
+        {{#if this.winnum.day}}
+          {{#if this.winnum.day}}
+            Winning Number Day:
+            <span class="red">{{this.winnum.day}}</span>
+          {{/if}}
+          <br/>
+          {{#if this.winnum.eve}}
+            Winning Number Night:
+            <span class="red">{{this.winnum.eve}}</span>
+          {{/if}}
+        {{else}}
+
+          Winning Number:
+          <span class="red">{{this.winnum}}</span>
+        {{/if}}
+        <br/>
+        {{this.description}}
+      </li>
+      <hr/>
+    {{/each}}
+  </ul>
+</template>
