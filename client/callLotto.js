@@ -33,9 +33,7 @@ callLotto = function () {
       }
     });
 
-    //console.log(regGames);
     $.each(title, function () {
-
       NumA = this["winnum"];
 
       if (NumA.length) {
@@ -45,7 +43,7 @@ callLotto = function () {
         NumBpick = numStore.findOne({"title": this["game"]}, {sort: {"date": -1, limit: 1}});
         if (this["game"] !== "PLAY4" && this["game"] !== "CASH3") {
           if (NumBpick !== undefined) {
-            splitNumB = NumBpick["_id"].split(/ X/);
+            splitNumB = NumBpick["nums"].split(/ X/);
             splitNumBMakeArray = splitNumB[0] ? splitNumB[0].split(/-| /) : splitNumB.split(/-| /);
             var sortedA = splitNumAMakeArray.sort(function (a, b) {
               return a - b;
@@ -55,13 +53,16 @@ callLotto = function () {
             });
             var matchesActual = getMatch(sortedA, sortedB);
             if (matchesActual.length) {
-              Meteor.call("numberHits", this["game"], this["drawdate"], NumBpick["nums"], this["winnum"], matchesActual, function (error, result) {
-                if (error) {
-                  console.log(error.reason);
-                } else {
-                  console.log('successful insert');
-                }
-              });
+              var numberHitsCheck = numberHits.find({"title": this.game}, {"date": this.drawdate.eve}, {"picked": NumBpick["nums"]}, {"actual": this["winnum"]}, {"matches": matchesActual}).count();
+              if (numberHitsCheck == 0) {
+                Meteor.call("numberHits", this["game"], this["drawdate"], NumBpick["nums"], this["winnum"], matchesActual, function (error, result) {
+                  if (error) {
+                    console.log(error.reason);
+                  } else {
+                    console.log('successful insert');
+                  }
+                });
+              }
             }
           }
         }
