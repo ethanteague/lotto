@@ -8,16 +8,17 @@ Template.ltGrab.helpers({
     Meteor.setInterval(function () {
       $.each(theGames, function (key, value) {
         if (value.game == "PLAY4" || value.game == "CASH3") {
+          //console.log(this);
+          //console.log(value);
           var datevalue = {
             "day": new Date(value.drawdate.day),
             "eve": new Date(value.drawdate.eve)
           };
-          var doubleGamesDayCheck = doubleGames.findOne({"title": this.game}, {"nums.day": this.winnum.day}, {"date.day": this.drawdate.day});
-          console.log(doubleGamesDayCheck);
-          var doubleGamesNightCheck = doubleGames.findOne({"title": this.game}, {"nums.eve": this.winnum.eve}, {"date.eve": this.drawdate.eve});
+          var doubleGamesDayCheck = doubleGames.find({"title": this.game}, {"nums.day": this.winnum.day}, {"date.day": this.drawdate.day}).count();
+          var doubleGamesNightCheck = doubleGames.find({"title": this.game}, {"nums.eve": this.winnum.eve}, {"date.eve": this.drawdate.eve}).count();
           console.log(doubleGamesDayCheck);
           console.log(doubleGamesNightCheck);
-          if (doubleGamesDayCheck === undefined && doubleGamesNightCheck === undefined) {
+          if (doubleGamesDayCheck == 0) {
             Meteor.call("doubleGames", value.game, datevalue, value.winnum, function (error, result) {
               if (error) {
                 //console.log(error.reason);
@@ -26,10 +27,21 @@ Template.ltGrab.helpers({
               }
             });
           }
+
+          if (doubleGamesNightCheck == 0) {
+            Meteor.call("doubleGames", value.game, datevalue, value.winnum, function (error, result) {
+              if (error) {
+                //console.log(error.reason);
+              } else {
+                //console.log('successful insert');
+              }
+            });
+          }
+
         } else {
           var datevalue = new Date(value.drawdate);
-          var ltDataCheck = ltGames.findOne({"title": this["game"]}, {"num": this["winnum"]}, {"date": this["drawdate"]});
-          if (ltDataCheck === undefined) {
+          var ltDataCheck = ltGames.find({"title": this["game"]}, {"num": this["winnum"]}, {"date": this["drawdate"]}).count();
+          if (ltDataCheck == 0) {
             Meteor.call("ltData", value.game, datevalue, value.winnum, function (error, result) {
               if (error) {
                 //console.log(error.reason);
