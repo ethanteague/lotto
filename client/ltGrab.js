@@ -8,18 +8,14 @@ Template.ltGrab.helpers({
     Meteor.setInterval(function () {
       $.each(theGames, function (key, value) {
         if (value.game == "PLAY4" || value.game == "CASH3") {
-          //console.log(this);
-          //console.log(value);
           var datevalue = {
             "day": new Date(value.drawdate.day),
             "eve": new Date(value.drawdate.eve)
           };
-          var doubleGamesDayCheck = doubleGames.find({"title": this.game}, {"nums.day": this.winnum.day}, {"date.day": this.drawdate.day}).count();
-          var doubleGamesNightCheck = doubleGames.find({"title": this.game}, {"nums.eve": this.winnum.eve}, {"date.eve": this.drawdate.eve}).count();
-          console.log(doubleGamesDayCheck);
-          console.log(doubleGamesNightCheck);
+          var doubleGamesDayCheck = dayGames.find({"title": this.game}, {"nums": this.winnum.day}, {"date": this.drawdate.day}).count();
+          var doubleGamesNightCheck = nightGames.find({"title": this.game}, {"nums": this.winnum.eve}, {"date": this.drawdate.eve}).count();
           if (doubleGamesDayCheck == 0) {
-            Meteor.call("doubleGames", value.game, datevalue, value.winnum, function (error, result) {
+            Meteor.call("dayGames", value.game, datevalue.day, value.winnum.day, function (error, result) {
               if (error) {
                 //console.log(error.reason);
               } else {
@@ -29,7 +25,7 @@ Template.ltGrab.helpers({
           }
 
           if (doubleGamesNightCheck == 0) {
-            Meteor.call("doubleGames", value.game, datevalue, value.winnum, function (error, result) {
+            Meteor.call("nightGames", value.game, datevalue.eve, value.winnum.eve, function (error, result) {
               if (error) {
                 //console.log(error.reason);
               } else {

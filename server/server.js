@@ -32,8 +32,16 @@ Meteor.methods({
     });
   },
 
-  "doubleGames": function(titleval, dateval, numsval) {
-    doubleGames.insert({
+  "dayGames": function(titleval, dateval, numsval) {
+    dayGames.insert({
+      title: titleval,
+      date: dateval,
+      nums: numsval
+    });
+  },
+
+  "nightGames": function(titleval, dateval, numsval) {
+    nightGames.insert({
       title: titleval,
       date: dateval,
       nums: numsval
@@ -50,8 +58,12 @@ Meteor.publish("numberHits", function() {
   return numberHits.find();
 })
 
-Meteor.publish("doubleGames", function() {
-  return doubleGames.find();
+Meteor.publish("dayGames", function() {
+  return dayGames.find();
+})
+
+Meteor.publish("nightGames", function() {
+  return nightGames.find();
 })
 
 Meteor.publish("ltGames", function() {
