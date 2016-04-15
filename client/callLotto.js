@@ -15,16 +15,32 @@ callLotto = function () {
 
       } else {
         var winnum = {
-          "day": $(j).attr("winnumm"),
-          "eve": $(j).attr("winnume")
+          "day": [$(j).attr("winnumm"), $(j).attr("midd"), "Day"],
+          "eve": [$(j).attr("winnume"), $(j).attr("eved"), "Night"]
         };
-        var drawdate = {
-          "day": $(j).attr("midd"),
-          "eve": $(j).attr("eved")
-        };
+        $.each(winnum, function (key, value) {
+          title.push({
+            "game": game + ' ' + value[2],
+            "winnum": value[0],
+            "drawdate": value[1],
+            "description": descrip
+          });
+          Session.set(game, {
+            "game": game + ' ' + value[2],
+            "winnum": value[0],
+            "drawdate": value[1],
+            "description": descrip
+          });
+        })
       }
-      if (game !== "MEGA" && game !== "MMC") {
+      if (game !== "MEGA" && game !== "MMC" && game !== "PLAY4" && game !== "CASH3") {
         title.push({
+          "game": game,
+          "winnum": winnum,
+          "drawdate": drawdate,
+          "description": descrip
+        });
+        Session.set(game, {
           "game": game,
           "winnum": winnum,
           "drawdate": drawdate,
@@ -33,52 +49,7 @@ callLotto = function () {
       }
     });
 
-    $.each(title, function () {
-      NumA = this["winnum"];
-
-      if (NumA.length) {
-        splitNumA = NumA.split(/ X/);
-        splitNumAMakeArray = splitNumA[0] ? splitNumA[0].split(/-| /) : splitNumA.split(/-| /);
-
-        NumBpick = numStore.findOne({"title": this["game"]}, {sort: {"date": -1, limit: 1}});
-        if (this["game"] !== "PLAY4" && this["game"] !== "CASH3") {
-          if (NumBpick !== undefined) {
-            splitNumB = NumBpick["nums"].split(/ X/);
-            splitNumBMakeArray = splitNumB[0] ? splitNumB[0].split(/-| /) : splitNumB.split(/-| /);
-            var sortedA = splitNumAMakeArray.sort(function (a, b) {
-              return a - b;
-            });
-            var sortedB = splitNumBMakeArray.sort(function (a, b) {
-              return a - b;
-            });
-            var matchesActual = getMatch(sortedA, sortedB);
-            if (matchesActual.length) {
-              var numberHitsCheck = numberHits.find({"title": this.game}, {"date": this.drawdate.eve}, {"picked": NumBpick["nums"]}, {"actual": this["winnum"]}, {"matches": matchesActual}).count();
-              if (numberHitsCheck == 0) {
-                Meteor.call("numberHits", this["game"], this["drawdate"], NumBpick["nums"], this["winnum"], matchesActual, function (error, result) {
-                  if (error) {
-                    console.log(error.reason);
-                  } else {
-                    console.log('successful insert');
-                  }
-                });
-              }
-            }
-          }
-        }
-      }
-    })
     Session.set("games", title);
   });
 }
 
-// Compare current drawing with picks
-function getMatch(a, b) {
-  var matches = [];
-  for (var i = 0; i < a.length; i++) {
-    for (var e = 0; e < b.length; e++) {
-      if (a[i] === b[e]) matches.push(a[i]);
-    }
-  }
-  return matches;
-}

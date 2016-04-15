@@ -10,8 +10,10 @@
       <option value="LOTTO">Florida Lotto</option>
       <option value="MEGAMILLIONS">Mega Millions</option>
       <option value="FAN5">Fantasy 5</option>
-      <option value="PLAY4">Play 4</option>
-      <option value="CASH3">Cash 3</option>
+      <option value="PLAY4Day">Play 4 Day</option>
+      <option value="PLAY4Night">Play 4 Night</option>
+      <option value="CASH3Day">Cash 3 Day</option>
+      <option value="CASH3Night">Cash 3 Night</option>
       <option value="LUCKY">Lucky Money</option>
     </select>
   </form>
@@ -77,7 +79,7 @@
     </form>
   {{/if}}
 
-  {{#if _.isEqual data.[1] "PLAY4"}}
+  {{#if _.isEqual data.[1] "PLAY4Day"}}
     <form class="chooseGame {{data.[1]}}">
       {{#each data.[0]}}
         <input type="number" size="1" min="0" max="9" required name={{this}}>
@@ -90,7 +92,33 @@
     </form>
   {{/if}}
 
-  {{#if _.isEqual data.[1] "CASH3"}}
+  {{#if _.isEqual data.[1] "PLAY4Night"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        <input type="number" size="1" min="0" max="9" required name={{this}}>
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "CASH3Day"}}
+    <form class="chooseGame {{data.[1]}}">
+      {{#each data.[0]}}
+        <input type="number" size="1" min="0" max="9" required name={{this}}>
+      {{/each}}
+      {{#if data.[0]}}
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">add number</button>
+        <br/><br/>
+      {{/if}}
+    </form>
+  {{/if}}
+
+  {{#if _.isEqual data.[1] "CASH3Night"}}
     <form class="chooseGame {{data.[1]}}">
       {{#each data.[0]}}
         <input type="number" size="1" min="0" max="9" required name={{this}}>
