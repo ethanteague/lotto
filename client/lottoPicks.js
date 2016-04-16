@@ -77,10 +77,10 @@ Template.lottoPicks.events({
       splitNumA = NumA.split(/ X/);
       splitNumAMakeArray = splitNumA[0] ? splitNumA[0].split(/-| /) : splitNumA.split(/-| /);
 
-      NumBpick = numStore.findOne({"title": tempTitle[0].game}, {sort: {"date": -1, limit: 1}});
-      console.log(NumBpick);
+      NumBpick = numStore.find({"title": tempTitle[0].game}, {sort: {"date": -1, limit: 1}}).fetch();
 
-      splitNumB = NumBpick["nums"].split(/ X/);
+      splitNumB = NumBpick[0].nums.split(/ X/);
+      console.log(splitNumB);
       splitNumBMakeArray = splitNumB[0] ? splitNumB[0].split(/-| /) : splitNumB.split(/-| /);
 
       var sortedA = splitNumAMakeArray.sort(function (a, b) {
@@ -96,9 +96,9 @@ Template.lottoPicks.events({
       }
 
       if (matchesActual.length) {
-        var numberHitsCheck = numberHits.find({"title": tempTitle[0].game}, {"date": tempTitle[0].drawdate}, {"picked": NumBpick["nums"]}, {"actual": tempTitle[0].winnum}, {"matches": matchesActual}).count();
+        var numberHitsCheck = numberHits.find({"title": tempTitle[0].game}, {"date": tempTitle[0].drawdate}, {"picked": NumBpick[0].nums}, {"actual": tempTitle[0].winnum}, {"matches": matchesActual}).count();
         if (numberHitsCheck == 0) {
-          Meteor.call("numberHits", tempTitle[0].game, tempTitle[0].drawdate, NumBpick["nums"], tempTitle[0].winnum, matchesActual, function (error, result) {
+          Meteor.call("numberHits", tempTitle[0].game, tempTitle[0].drawdate, NumBpick[0].nums, tempTitle[0].winnum, matchesActual, function (error, result) {
             if (error) {
               console.log(error.reason);
             } else {
