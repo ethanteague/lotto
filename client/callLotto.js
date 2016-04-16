@@ -20,13 +20,7 @@ callLotto = function () {
         };
         $.each(winnum, function (key, value) {
           title.push({
-            "game": game + ' ' + value[2],
-            "winnum": value[0],
-            "drawdate": value[1],
-            "description": descrip
-          });
-          Session.set(game, {
-            "game": game + ' ' + value[2],
+            "game": game + value[2],
             "winnum": value[0],
             "drawdate": value[1],
             "description": descrip
@@ -35,12 +29,6 @@ callLotto = function () {
       }
       if (game !== "MEGA" && game !== "MMC" && game !== "PLAY4" && game !== "CASH3") {
         title.push({
-          "game": game,
-          "winnum": winnum,
-          "drawdate": drawdate,
-          "description": descrip
-        });
-        Session.set(game, {
           "game": game,
           "winnum": winnum,
           "drawdate": drawdate,

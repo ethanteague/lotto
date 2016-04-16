@@ -60,39 +60,45 @@ Template.lottoPicks.events({
       });
     }
 
-
-    var gameKey = Session.get(gameName);
-    console.log(gameKey);
-    NumA = gameKey.winnum;
-    if (NumA.length || gameKey.winnum.day.length) {
+    var allGames = Session.get("games");
+    var tempTitle = [];
+    $.each(allGames, function (key, value) {
+      if (value.game == gameName) {
+        tempTitle.push({
+          "game": gameName,
+          "winnum": value.winnum,
+          "drawdate": value.drawdate,
+          "description": value.description
+        });
+      }
+    })
+    NumA = tempTitle[0].winnum;
+    if (NumA.length) {
       splitNumA = NumA.split(/ X/);
       splitNumAMakeArray = splitNumA[0] ? splitNumA[0].split(/-| /) : splitNumA.split(/-| /);
 
-      NumBpick = numStore.findOne({"title": gameKey.game}, {sort: {"date": -1, limit: 1}});
+      NumBpick = numStore.findOne({"title": tempTitle[0].game}, {sort: {"date": -1, limit: 1}});
       console.log(NumBpick);
-      if (gameKey.game != "PLAY4" && gameKey.game != "CASH3" && NumBpick != undefined) {
-        console.log("in the first");
-        splitNumB = NumBpick["nums"].split(/ X/);
-        splitNumBMakeArray = splitNumB[0] ? splitNumB[0].split(/-| /) : splitNumB.split(/-| /);
-        var sortedA = splitNumAMakeArray.sort(function (a, b) {
-          return a - b;
-        });
-        var sortedB = splitNumBMakeArray.sort(function (a, b) {
-          return a - b;
-        });
-        var matchesActual = getMatch(sortedA, sortedB);
-      }
-      if (gameKey.game == "PLAY4") {
 
+      splitNumB = NumBpick["nums"].split(/ X/);
+      splitNumBMakeArray = splitNumB[0] ? splitNumB[0].split(/-| /) : splitNumB.split(/-| /);
+
+      var sortedA = splitNumAMakeArray.sort(function (a, b) {
+        return a - b;
+      });
+      var sortedB = splitNumBMakeArray.sort(function (a, b) {
+        return a - b;
+      });
+      var matchesActual = getMatch(sortedA, sortedB);
+
+      if (tempTitle[0].game == "PLAY4Day" || tempTitle[0].game == "PLAY4Night" || tempTitle[0].game == "CASH3Day" || tempTitle[0].game == "CASH3Night") {
         var matchesActual = getMatch(splitNumAMakeArray, splitNumBMakeArray);
-        console.log("im here");
-        console.log(matchesActual);
       }
 
       if (matchesActual.length) {
-        var numberHitsCheck = numberHits.find({"title": gameKey.game}, {"date": gameKey.drawdate}, {"picked": NumBpick["nums"]}, {"actual": gameKey.winnum}, {"matches": matchesActual}).count();
+        var numberHitsCheck = numberHits.find({"title": tempTitle[0].game}, {"date": tempTitle[0].drawdate}, {"picked": NumBpick["nums"]}, {"actual": tempTitle[0].winnum}, {"matches": matchesActual}).count();
         if (numberHitsCheck == 0) {
-          Meteor.call("numberHits", gameKey.game, gameKey.drawdate, NumBpick["nums"], gameKey.winnum, matchesActual, function (error, result) {
+          Meteor.call("numberHits", tempTitle[0].game, tempTitle[0].drawdate, NumBpick["nums"], tempTitle[0].winnum, matchesActual, function (error, result) {
             if (error) {
               console.log(error.reason);
             } else {
