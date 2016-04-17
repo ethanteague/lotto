@@ -9,15 +9,16 @@ Meteor.methods({
   "numStore": function(titleval, dateval, numsval) {
     numStore.insert({
       title: titleval,
-      date: dateval,
+      date: dateval.valueOf(),
       nums: numsval
     });
   },
 
-  "numberHits": function(titleval, dateval, picked, actual, matches) {
+  "numberHits": function(titleval, dateval, datepickedval, picked, actual, matches) {
     numberHits.insert({
       title: titleval,
-      date: dateval,
+      date: dateval.valueOf(),
+      datepicked: datepickedval,
       picked: picked,
       actual: actual,
       matches: matches
@@ -27,7 +28,7 @@ Meteor.methods({
   "ltData": function(titleval, dateval, numsval) {
     ltGames.insert({
       title: titleval,
-      date: dateval,
+      date: dateval.valueOf(),
       nums: numsval
     });
   },

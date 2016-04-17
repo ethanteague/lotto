@@ -1,5 +1,11 @@
 <template name="matchesActivity">
+  <span>Newest Hits</span>
   <ul>
-    <li>More to come...</li>
+    {{#each data}}
+      <li>
+        <strong>Game:</strong>
+        <span class="green">{{this}}</span>
+      </li>
+    {{/each}}
   </ul>
 </template>
