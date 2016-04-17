@@ -39,5 +39,6 @@ callLotto = function () {
 
     Session.set("games", title);
   });
+  numMatcher();
 }
 
