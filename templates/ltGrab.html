@@ -1,10 +1,10 @@
 
 <template name="ltGrab">
+  <h4>Latest Drawings</h4>
   <ul>
     {{#each data}}
       <li>
-        <strong>Game:</strong>
-        <span class="green">{{this.game}}</span>
+        <span class="green"><strong>{{this.game}}</strong></span>
       </li>
       <li>
         {{#if this.drawdate.day}}
@@ -38,8 +38,6 @@
           Winning Number:
           <span class="red">{{this.winnum}}</span>
         {{/if}}
-        <br/>
-        {{this.description}}
       </li>
       <hr/>
     {{/each}}

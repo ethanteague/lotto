@@ -1,0 +1,11 @@
+<template name="userPicks">
+  <h3>Latest Picks</h3>
+  <ul>
+    {{#each data}}
+      <li>
+        <span class="green">{{this.title}}</span>
+        <span class="green">{{this.nums}}</span>
+      </li>
+    {{/each}}
+  </ul>
+</template>
