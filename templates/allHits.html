@@ -1,10 +1,11 @@
-<template name="userPicks">
-  <h3>Current Picks</h3>
+<template name="allHits">
+  <h3>Match History</h3>
   <ul>
     {{#each data}}
       <li>
         <span class="green">{{this.title}}: </span>
         <span class="green">{{this.nums}}</span>
+        <span class="green">{{this.date}}</span>
       </li>
     {{/each}}
   </ul>

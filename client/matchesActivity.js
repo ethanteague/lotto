@@ -8,6 +8,6 @@ Template.matchesActivity.helpers({
       return x.title + " | Date: " + cleanTime +  " | Actual: " + x.actual + " | Your Picks: " + x.picked ;
     }), true);
 
-    return matches;
+    return matches.slice(0, 5);
   }
 });
