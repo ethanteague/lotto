@@ -49,7 +49,7 @@ Template.lottoPicks.events({
 
       var datevalue2 = new Date();
 
-      Meteor.call("numStore", Session.get("gameName"), datevalue2, completeString, function (error, result) {
+      Meteor.call("numStore", Meteor.user()._id, Session.get("gameName"), datevalue2, completeString, function (error, result) {
         if (error) {
           Session.set('successInsert', "no");
           //console.log(error.reason);

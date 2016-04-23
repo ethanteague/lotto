@@ -189,7 +189,6 @@
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/timeout.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/staticCache.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/favicon.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/index.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/compress.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/session.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/logger.js" />
@@ -198,15 +197,10 @@
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/responseTime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/cookieSession.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/multipart.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/read.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/limit.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/text.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/basicAuth.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/raw.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/methodOverride.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/urlencoded.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/query.js" />
-        <item url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/json.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/urlencoded.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/directory.js" />
         <item url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/vhost.js" />
@@ -428,7 +422,6 @@
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/timeout.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/staticCache.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/favicon.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/index.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/compress.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/session.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/logger.js" />
@@ -437,15 +430,10 @@
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/responseTime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/cookieSession.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/multipart.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/read.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/limit.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/text.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/basicAuth.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/raw.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/methodOverride.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/urlencoded.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/query.js" />
-      <root url="file://$USER_HOME$/.meteor/packages/iron_router/1.0.12/npm/node_modules/body-parser/lib/types/json.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/urlencoded.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/directory.js" />
       <root url="file://$USER_HOME$/.meteor/packages/webapp/1.2.3/npm/node_modules/connect/lib/middleware/vhost.js" />

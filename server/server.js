@@ -1,3 +1,7 @@
+Meteor.startup(function () {
+  process.env.MAIL_URL = "smtp://metrowebz%40gmail.com:Utket6977!@smtp.gmail.com:465/"
+});
+
 //inside a meteor method
 Meteor.methods({
   "stream": function () {
@@ -6,12 +10,14 @@ Meteor.methods({
     return Stream;
   },
 
-  "numStore": function (titleval, dateval, numsval) {
+  "numStore": function (user, titleval, dateval, numsval) {
     numStore.update({
+      user: this.userId,
       title: titleval,
       date: dateval.valueOf(),
       nums: numsval
     }, {
+      user: this.userId,
       title: titleval,
       date: dateval.valueOf(),
       nums: numsval
@@ -20,8 +26,9 @@ Meteor.methods({
     });
   },
 
-  "numberHits": function (titleval, dateval, datepickedval, picked, actual, matches) {
+  "numberHits": function (user, titleval, dateval, datepickedval, picked, actual, matches) {
     numberHits.update({
+      user: this.userId,
       title: titleval,
       date: dateval.valueOf(),
       datepicked: datepickedval,
@@ -29,6 +36,7 @@ Meteor.methods({
       actual: actual,
       matches: matches
     }, {
+      user: this.userId,
       title: titleval,
       date: dateval.valueOf(),
       datepicked: datepickedval,
@@ -57,11 +65,11 @@ Meteor.methods({
 });
 
 Meteor.publish("numStore", function () {
-  return numStore.find();
+    return numStore.find({user: this.userId});
 })
 
 Meteor.publish("numberHits", function () {
-  return numberHits.find();
+    return numberHits.find({user: this.userId});
 })
 
 Meteor.publish("ltGames", function () {
