@@ -66,7 +66,7 @@ body {
 }
 
 .navbar-default.lotto {
-  background-color: #E98300;
+  background-color: #337ab7;
 }
 
 .navbar-default.lotto a,
@@ -76,7 +76,7 @@ body {
 
 .navbar-default.lotto a:hover,
 .navbar-default.lotto .navbar-nav > li > a:hover, .navbar-default.lotto .navbar-nav > li > a:focus{
-  color: green;
+  color: yellow;
 }
 
 .navbar-default.lotto .navbar-toggle .icon-bar {
