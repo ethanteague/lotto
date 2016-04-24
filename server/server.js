@@ -1,5 +1,5 @@
 Meteor.startup(function () {
-  process.env.MAIL_URL = "smtp://metrowebz%40gmail.com:Utket6977!@smtp.gmail.com:465/"
+  process.env.MAIL_URL = Meteor.settings.mailSettings;
 });
 
 //inside a meteor method

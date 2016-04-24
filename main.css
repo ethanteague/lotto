@@ -91,3 +91,14 @@ body {
 .navbar-brand.logo {
   padding: 1px 15px;
 }
+
+a#forgot-password-link,
+a#signup-link {
+  color: green;
+}
+
+.navbar-default.lotto .navbar-nav > .open > a,
+.navbar-default.lotto .navbar-nav > .open > a:hover,
+.navbar-default.lotto .navbar-nav > .open > a:focus {
+  color: green;
+}

@@ -7,7 +7,6 @@ Template.matchesActivity.helpers({
       cleanTime = new Date(x.date).toISOString().slice(0, 10);
       return {game: x.title, time: cleanTime, actual: x.actual, picked: x.picked};
     }), true);
-console.log(matches);
     return matches.slice(0, 5);
   }
 });
