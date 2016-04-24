@@ -1,13 +1,15 @@
 <template name="allHits">
-  <h3>Match History</h3>
-  <ul>
-    {{#each data}}
-      <li>
-        <span class="green">{{this.title}}: </span>
-        <span class="green">{{this.date}} | </span>
-        <span class="green">Numbers: {{this.actual}} | </span>
-        <span class="green">Your picks: {{this.picked}}</span>
-      </li>
-    {{/each}}
-  </ul>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Match History</div>
+    <ul class="list-group">
+      {{#each data}}
+        <li class="list-group-item">
+          <span class="green">{{this.title}}: </span>
+          <span class="green">{{this.date}} | </span>
+          <span class="green">Numbers: {{this.actual}} | </span>
+          <span class="green">Your picks: {{this.picked}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </template>

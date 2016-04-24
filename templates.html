@@ -12,8 +12,9 @@
 </template>
 
 <template name="aboveContainer">
-  <div class="navbar navbar-default" role="navigation">
+  <div class="navbar navbar-default lotto" role="navigation">
     <div class="navbar-header">
+      <a class="navbar-brand logo" href="/"><img src="/images/lotto.png" /></a>
       <a class="navbar-brand" href="/">Latest</a>
       <a class="navbar-brand" href="/activity">All hits</a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,7 +25,7 @@
       </button>
     </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right lotto">
         {{> loginButtons}}
       </ul>
     </div>

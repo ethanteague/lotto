@@ -1,10 +1,18 @@
 <template name="matchesActivity">
-  <h3>Newest Hits</h3>
-  <ul>
-    {{#each data}}
-      <li>
-        <span class="green">{{this}}</span>
-      </li>
-    {{/each}}
-  </ul>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Newest Hits</div>
+    <ul class="list-group">
+      {{#each data}}
+        <li class="list-group-item">
+          <span class="red"><strong>{{this.game}}</strong></span>
+          <span class="green"> you picked: </span>
+          <span class="badge">{{this.picked}}</span>
+          <br />
+          <span class="green">Drawing for {{this.time}}</span>:
+          <span class="green"> {{this.actual}}</span>
+
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </template>

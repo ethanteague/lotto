@@ -16,15 +16,19 @@ ul {
   margin-end: 0px;
   padding-start: 0px;
 }
+
 li {
   list-style: none;
 }
+
 .red {
   color: red;
 }
+
 .green {
   color: green;
 }
+
 body {
 }
 
@@ -35,12 +39,15 @@ body {
   padding:0;
   margin:0 auto;
 }
+
 .list-group-item.autoform-array-item.4pack{
   width: calc(99%/4);
 }
+
 .list-group-item.autoform-array-item.5pack{
   width: calc(99%/5);
 }
+
 .list-group-item.autoform-array-item.6pack{
   width: calc(99%/6);
 }
@@ -50,9 +57,37 @@ body {
   color: white;
   font-weight: bold;
 }
+
 .error {
   border: red solid 1px;
 }
 
 .error-span {
+}
+
+.navbar-default.lotto {
+  background-color: #E98300;
+}
+
+.navbar-default.lotto a,
+.navbar-default.lotto .navbar-nav > li > a{
+  color: white;
+}
+
+.navbar-default.lotto a:hover,
+.navbar-default.lotto .navbar-nav > li > a:hover, .navbar-default.lotto .navbar-nav > li > a:focus{
+  color: green;
+}
+
+.navbar-default.lotto .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default.lotto .navbar-toggle,
+.navbar-default.lotto .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-brand.logo {
+  padding: 1px 15px;
 }

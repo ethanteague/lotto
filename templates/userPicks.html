@@ -1,11 +1,13 @@
 <template name="userPicks">
-  <h3>Current Picks</h3>
-  <ul>
-    {{#each data}}
-      <li>
-        <span class="green">{{this.title}}: </span>
-        <span class="green">{{this.nums}}</span>
-      </li>
-    {{/each}}
-  </ul>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Your Picks</div>
+    <ul class="list-group">
+      {{#each data}}
+        <li class="list-group-item">
+          <span class="green"><strong>{{this.title}}</strong></span>
+          <span class="badge">{{this.nums}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </template>

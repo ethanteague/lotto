@@ -1,45 +1,15 @@
-
 <template name="ltGrab">
-  <h4>Latest Drawings</h4>
-  <ul>
-    {{#each data}}
-      <li>
-        <span class="green"><strong>{{this.game}}</strong></span>
-      </li>
-      <li>
-        {{#if this.drawdate.day}}
-          {{#if this.drawdate.day}}
-            Day Draw:
-            {{this.drawdate.day}}
-          {{/if}}
-          <br/>
-          {{#if this.drawdate.eve}}
-            Night Draw:
-            {{this.drawdate.eve}}
-          {{/if}}
-        {{else}}
-          Draw Date:
-          {{this.drawdate}}
-        {{/if}}
-      </li>
-      <li>
-        {{#if this.winnum.day}}
-          {{#if this.winnum.day}}
-            Winning Number Day:
-            <span class="red">{{this.winnum.day}}</span>
-          {{/if}}
-          <br/>
-          {{#if this.winnum.eve}}
-            Winning Number Night:
-            <span class="red">{{this.winnum.eve}}</span>
-          {{/if}}
-        {{else}}
-
-          Winning Number:
-          <span class="red">{{this.winnum}}</span>
-        {{/if}}
-      </li>
-      <hr/>
-    {{/each}}
-  </ul>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Latest Drawings</div>
+    <ul class="list-group">
+      {{#each data}}
+        <li class="list-group-item">
+          <span class="green"><strong>{{this.game}}</strong></span>
+          <span class="badge">{{this.winnum}}</span>
+          <br />
+         {{this.drawdate}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </template>
