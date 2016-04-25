@@ -1,5 +1,6 @@
 Meteor.startup(function () {
   process.env.MAIL_URL = Meteor.settings.mailSettings;
+  process.env.MONGO_URL = Meteor.settings.mongoSettings;
 });
 
 //inside a meteor method
