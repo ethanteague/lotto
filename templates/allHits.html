@@ -1,5 +1,6 @@
 
 <template name="allHits">
+{{#if currentUser }}
   <div class="panel panel-info">
     <div class="panel-heading">Match History</div>
     <ul class="list-group">
@@ -16,5 +17,6 @@
       {{/each}}
     </ul>
   </div>
+  {{/if}}
 </template>
 

@@ -1,17 +1,17 @@
 <template name="main">
   <main>
-    {{#if Template.subscriptionsReady}}
-      {{> aboveContainer}}
-      <div class="container">
+    {{> aboveContainer}}
+    <div class="container">
+      {{#if Template.subscriptionsReady}}
         {{> Template.dynamic template=top}}
         {{> Template.dynamic template=upperContent}}
         {{> Template.dynamic template=content}}
         {{> Template.dynamic template=lowerContent}}
         {{> Template.dynamic template=bottom}}
-      </div>
-    {{else}}
-      {{> loader}}
-    {{/if}}
+      {{else}}
+        {{> loader}}
+      {{/if}}
+    </div>
   </main>
 </template>
 
@@ -34,10 +34,6 @@
       </ul>
     </div>
   </div>
-</template>
-
-<template name="insertNumbersForm">
-  {{> quickForm collection="Numbers" id="insertNumbersForm" type="insert"}}
 </template>
 
 <template name="standard_login">
