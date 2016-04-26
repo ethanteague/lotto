@@ -1,22 +1,26 @@
-
 <template name="allHits">
-{{#if currentUser }}
-  <div class="panel panel-info">
-    <div class="panel-heading">Match History</div>
-    <ul class="list-group">
-      {{#each data}}
-        <li class="list-group-item">
-          <span class="red"><strong>{{this.title}}</strong></span>
-          <span class="green"> you picked: </span>
-          <span class="badge">{{this.picked}}</span>
-          <br />
-          <span class="green">Drawing for {{this.date}}</span>:
-          <span class="green"> {{this.actual}}</span>
+  {{#if currentUser }}
+    {{#if data}}
+      <div class="panel panel-info">
+        <div class="panel-heading">Match History</div>
+        <ul class="list-group">
+          {{#each data}}
+            <li class="list-group-item">
+              <span class="red"><strong>{{this.title}}</strong></span>
+              <span class="green"> you picked: </span>
+              <span class="badge">{{this.picked}}</span>
+              <br/>
+              <span class="green">Drawing for {{this.date}}</span>:
+              <span class="green"> {{this.actual}}</span>
 
-        </li>
-      {{/each}}
-    </ul>
-  </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{else}}
+      {{> loader}}
+    {{/if}}
   {{/if}}
+
 </template>
 

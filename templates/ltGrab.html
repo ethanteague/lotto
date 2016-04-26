@@ -1,15 +1,19 @@
 <template name="ltGrab">
-  <div class="panel panel-info">
-    <div class="panel-heading">Latest Drawings</div>
-    <ul class="list-group">
-      {{#each data}}
-        <li class="list-group-item">
-          <span class="green"><strong>{{this.game}}</strong></span>
-          <span class="badge">{{this.winnum}}</span>
-          <br />
-         {{this.drawdate}}
-        </li>
-      {{/each}}
-    </ul>
-  </div>
+  {{#if data}}
+    <div class="panel panel-info">
+      <div class="panel-heading">Latest Drawings</div>
+      <ul class="list-group">
+        {{#each data}}
+          <li class="list-group-item">
+            <span class="green"><strong>{{this.game}}</strong></span>
+            <span class="badge">{{this.winnum}}</span>
+            <br/>
+            {{this.drawdate}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{else}}
+    {{> loader}}
+  {{/if}}
 </template>

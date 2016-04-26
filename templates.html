@@ -2,15 +2,11 @@
   <main>
     {{> aboveContainer}}
     <div class="container">
-      {{#if Template.subscriptionsReady}}
-        {{> Template.dynamic template=top}}
-        {{> Template.dynamic template=upperContent}}
-        {{> Template.dynamic template=content}}
-        {{> Template.dynamic template=lowerContent}}
-        {{> Template.dynamic template=bottom}}
-      {{else}}
-        {{> loader}}
-      {{/if}}
+      {{> Template.dynamic template=top}}
+      {{> Template.dynamic template=upperContent}}
+      {{> Template.dynamic template=content}}
+      {{> Template.dynamic template=lowerContent}}
+      {{> Template.dynamic template=bottom}}
     </div>
   </main>
 </template>

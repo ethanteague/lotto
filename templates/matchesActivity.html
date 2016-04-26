@@ -1,20 +1,25 @@
 <template name="matchesActivity">
   {{#if currentUser }}
-    <div class="panel panel-info">
-      <div class="panel-heading">Newest Hits</div>
-      <ul class="list-group">
-        {{#each data}}
-          <li class="list-group-item">
-            <span class="red"><strong>{{this.game}}</strong></span>
-            <span class="green"> you picked: </span>
-            <span class="badge">{{this.picked}}</span>
-            <br/>
-            <span class="green">Drawing for {{this.time}}</span>:
-            <span class="green"> {{this.actual}}</span>
+    {{#if data }}
+      <div class="panel panel-info">
+        <div class="panel-heading">Newest Hits</div>
+        <ul class="list-group">
+          {{#each data}}
+            <li class="list-group-item">
+              <span class="red"><strong>{{this.game}}</strong></span>
+              <span class="green"> you picked: </span>
+              <span class="badge">{{this.picked}}</span>
+              <br/>
+              <span class="green">Drawing for {{this.time}}</span>:
+              <span class="green"> {{this.actual}}</span>
 
-          </li>
-        {{/each}}
-      </ul>
-    </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{else}}
+      {{> loader}}
+    {{/if}}
   {{/if}}
+
 </template>
