@@ -53,9 +53,10 @@ body {
 }
 
 .special {
-  background: #6cff7f;
+  background: #337AB7;
   color: white;
   font-weight: bold;
+  border: 2px solid #BDBABA;
 }
 
 .error {
@@ -106,4 +107,13 @@ a#signup-link {
 #loader-1 {
   width:100%;
   height:100%;
+}
+
+.list-group-item .badge {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.chooseGame input {
+
 }

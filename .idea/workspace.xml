@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c6512a9-e3df-4d19-9487-ac6e347c909b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/lotto.png" afterPath="$PROJECT_DIR$/public/images/lotto.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates.html" afterPath="$PROJECT_DIR$/templates.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/allHits.html" afterPath="$PROJECT_DIR$/templates/allHits.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/lottoPicks.html" afterPath="$PROJECT_DIR$/templates/lottoPicks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ltGrab.html" afterPath="$PROJECT_DIR$/templates/ltGrab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/matchesActivity.html" afterPath="$PROJECT_DIR$/templates/matchesActivity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/userPicks.html" afterPath="$PROJECT_DIR$/templates/userPicks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
     </list>
     <ignored path="lotto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +37,18 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+            <state relative-caret-position="645">
+              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -50,8 +57,18 @@
       <file leaf-file-name="settings.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="105">
+              <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="allHits.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="allHits.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/allHits.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -107,11 +124,8 @@
         <option value="$PROJECT_DIR$/.meteor/packages" />
         <option value="$PROJECT_DIR$/lib/numMatcher.js" />
         <option value="$PROJECT_DIR$/client/allHits.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/matchesActivity.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/settings.json" />
-        <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/client/ltGrab.js" />
         <option value="$PROJECT_DIR$/templates.html" />
         <option value="$PROJECT_DIR$/templates/ltGrab.html" />
@@ -120,6 +134,9 @@
         <option value="$PROJECT_DIR$/templates/userPicks.html" />
         <option value="$PROJECT_DIR$/templates/matchesActivity.html" />
         <option value="$PROJECT_DIR$/templates/allHits.html" />
+        <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/settings.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -133,9 +150,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="254" />
-    <option name="y" value="30" />
-    <option name="width" value="991" />
+    <option name="x" value="372" />
+    <option name="y" value="23" />
+    <option name="width" value="1136" />
     <option name="height" value="831" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -181,34 +198,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lotto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lotto" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lotto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lotto" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -243,16 +232,16 @@
     <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/client" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/client" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/client" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Lotto">
@@ -318,12 +307,12 @@
       <workItem from="1461356639479" duration="16050000" />
       <workItem from="1461530399862" duration="2573000" />
       <workItem from="1461542018300" duration="5478000" />
-      <workItem from="1461629683108" duration="2660000" />
+      <workItem from="1461629683108" duration="4165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184169000" />
+    <option name="totallyTimeSpent" value="185674000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,10 +324,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="254" y="30" width="991" height="831" extended-state="0" />
+    <frame x="372" y="23" width="1136" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24762908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="636" y="57" width="193" height="764" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24680074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="636" y="57" width="193" height="764" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882273" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32940018" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -634,30 +623,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.meteor/local/build/programs/web.cordova/app/images/lotto.png" />
     <entry file="file://$PROJECT_DIR$/settings-production.json" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -706,14 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/userPicks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -750,6 +707,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
