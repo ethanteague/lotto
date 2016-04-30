@@ -1,14 +1,13 @@
 <template name="matchesActivity">
   {{#if currentUser }}
     {{#if data }}
-      <div class="panel panel-info">
+      <div class="panel panel-primary">
         <div class="panel-heading">Newest Hits</div>
         <ul class="list-group">
           {{#each data}}
             <li class="list-group-item">
               <span class="red"><strong>{{this.game}}</strong></span>
-              <span class="green"> you picked: </span>
-              <span class="badge">{{this.picked}}</span>
+              <div class="float-nums-right">{{{this.picked}}}</div>
               <br/>
               <span class="green">Drawing for {{this.time}}</span>:
               <span class="green"> {{this.actual}}</span>

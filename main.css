@@ -67,44 +67,45 @@ body {
 }
 
 .navbar-default.lotto {
-  background-color: #337ab7;
+  //background-color: #337ab7;
 }
 
 .navbar-default.lotto a,
 .navbar-default.lotto .navbar-nav > li > a{
-  color: white;
+  //color: white;
 }
 
 .navbar-default.lotto a:hover,
 .navbar-default.lotto .navbar-nav > li > a:hover, .navbar-default.lotto .navbar-nav > li > a:focus{
-  color: yellow;
+  //color: yellow;
 }
 
 .navbar-default.lotto .navbar-toggle .icon-bar {
-  background-color: white;
+  //background-color: white;
 }
 
 .navbar-default.lotto .navbar-toggle,
 .navbar-default.lotto .navbar-toggle:hover {
-  background-color: transparent;
+  //background-color: transparent;
 }
 
 .navbar-brand.logo {
   padding: 1px 15px;
 }
+@media (min-width: 768px) {
+  a#forgot-password-link,
+  a#signup-link {
+    //color: green;
+  }
 
-a#forgot-password-link,
-a#signup-link {
-  color: green;
+  .navbar-default.lotto .navbar-nav > .open > a,
+  .navbar-default.lotto .navbar-nav > .open > a:hover,
+  .navbar-default.lotto .navbar-nav > .open > a:focus {
+    //color: green;
+  }
 }
 
-.navbar-default.lotto .navbar-nav > .open > a,
-.navbar-default.lotto .navbar-nav > .open > a:hover,
-.navbar-default.lotto .navbar-nav > .open > a:focus {
-  color: green;
-}
-
-#loader-1 {
+.loader-1 {
   width:100%;
   height:100%;
 }
@@ -116,4 +117,11 @@ a#signup-link {
 
 .chooseGame input {
 
+}
+
+#login-dropdown-list a#signup-link {
+}
+
+.badge.match-highlight {
+  background-color: red;
 }
