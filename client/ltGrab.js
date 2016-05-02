@@ -24,7 +24,7 @@ Template.ltGrab.helpers({
 
       });
       callLotto();
-    }, 120 * 1000); // Poll every two minutes, set to 120 * 1000.
+    }, 20 * 1000); // Poll every two minutes, set to 120 * 1000.
     return theGames;
   }
 });

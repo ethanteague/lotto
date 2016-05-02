@@ -1,20 +1,17 @@
 <template name="userPicks">
 
   {{#if currentUser}}
-    {{#if data}}
-      <div class="panel panel-primary">
-        <div class="panel-heading">Your Picks</div>
-        <ul class="list-group">
-          {{#each data}}
-            <li class="list-group-item">
-              <span class="green"><strong>{{this.title}}</strong></span>
-              <div class="float-nums-right">{{{this.nums}}}</div>
-            </li>
-          {{/each}}
-        </ul>
-      </div>
-    {{else}}
-      {{> loader}}
-    {{/if}}
+    <div class="panel panel-primary">
+      <div class="panel-heading">Your Picks</div>
+      <ul class="list-group">
+        {{#each data}}
+          <li class="list-group-item">
+            <span class="green"><strong>{{this.title}}</strong></span>
+            <div class="float-nums-right">{{{this.nums}}}</div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
   {{/if}}
 </template>
